@@ -55,8 +55,8 @@ mkdir -p ~/.local/share/solana/install/active_release/bin
 
 # Download and extract Solana
 cd /tmp
-wget -q "https://github.com/solana-labs/solana/releases/download/${SOLANA_VERSION}/${SOLANA_ARCHIVE}"
-tar -xjf "${SOLANA_ARCHIVE}"
+wget -q "https://github.com/solana-labs/solana/releases/download/v1.18.26/solana-release-x86_64-unknown-linux-gnu.tar.bz2"
+tar -xjf "solana-release-x86_64-unknown-linux-gnu.tar.bz2"
 
 # Move binaries to the correct location
 cp solana-release/bin/* ~/.local/share/solana/install/active_release/bin/
