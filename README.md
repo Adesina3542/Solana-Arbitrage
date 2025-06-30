@@ -215,8 +215,4 @@ anchor deploy --provider.cluster devnet
 
 ## Disclaimer
 
-This software is provided for educational purposes only. The authors are not responsible for any financial losses incurred through the use of this software. Cryptocurrency trading and arbitrage involve substantial risk of loss. Always do your own research and consider consulting with a financial advisor.
-
-## License
-
-MIT License - see LICENSE file for details
+This software is provided for educational purposes only. The author are not responsible for any financial losses incurred through the use of this software. Cryptocurrency trading and arbitrage involve substantial risk of loss. Always do your own research and consider consulting with a financial advisor.
