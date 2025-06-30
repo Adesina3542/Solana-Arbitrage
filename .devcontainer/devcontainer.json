@@ -1,38 +1,27 @@
 {
-  "name": "solana-arbitrage-bot",
-  "version": "1.0.0",
-  "description": "Solana flash loan arbitrage bot",
-  "main": "index.js",
-  "scripts": {
-    "build": "anchor build",
-    "test": "anchor test",
-    "deploy": "anchor deploy",
-    "clean": "anchor clean",
-    "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
+  "name": "Solana Flash Arbitrage Development",
+  "image": "mcr.microsoft.com/devcontainers/rust:1-1-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "dependencies": {
-    "@coral-xyz/anchor": "^0.30.1",
-    "@solana/web3.js": "^1.95.0",
-    "@solana/spl-token": "^0.4.8",
-    "bn.js": "^5.2.1",
-    "borsh": "^0.7.0"
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-json"
+      ]
+    }
   },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0",
-    "ts-node": "^10.9.0",
-    "mocha": "^10.0.0",
-    "chai": "^4.3.0",
-    "@types/mocha": "^10.0.0",
-    "@types/chai": "^4.3.0"
-  },
-  "keywords": [
-    "solana",
-    "arbitrage",
-    "flash-loan",
-    "defi",
-    "blockchain"
-  ],
-  "author": "HARDEX"
+  "forwardPorts": [3000, 8899, 8900],
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=solana-cache,target=/home/vscode/.cache,type=volume"
+  ]
 }
